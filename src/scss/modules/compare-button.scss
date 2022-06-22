@@ -1,0 +1,76 @@
+.compare-button {
+  padding: 0.5em 1.4em;
+  border-radius: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: box-shadow 0.1s linear;
+  &::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icons/compare-white.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  // .compare-button__text
+  &__text {
+    color: $color-dark-grey;
+  }
+  &--theme-grey {
+    background-color: #f3f3f3;
+    &::before {
+      background-image: url(../img/icons/compare-grey.svg);
+    }
+    &:active {
+      background-color: darken(#f3f3f3, 5%);
+    }
+    &:focus-visible {
+      outline: none;
+    }
+    &:hover,
+    &:focus-visible {
+      box-shadow: 0 0 5px #acacac;
+    }
+    .compare-button__text {
+      color: $color-dark-grey;
+    }
+  }
+
+  &--main-theme-color {
+    background-color: $color-main;
+    &:active {
+      background-color: darken($color-main, 5%);
+    }
+    &:focus-visible {
+      outline: none;
+    }
+    &:hover,
+    &:focus-visible {
+      box-shadow: 0 0 5px $color-accent;
+    }
+    .compare-button__text {
+      color: $color-white;
+    }
+  }
+  &--theme-card-item {
+    padding-left: 0;
+    padding-right: 0;
+    .compare-button__text {
+      color: $color-white;
+    }
+    &:hover,
+    &:focus-visible {
+      .compare-button__text {
+        color: darken($color-white, 15%);
+      }
+    }
+    &:active {
+      .compare-button__text {
+        color: $color-white;
+      }
+    }
+  }
+}

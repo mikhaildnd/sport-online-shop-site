@@ -1,0 +1,51 @@
+.thumb-slider {
+  counter-reset: item;
+  .swiper-slide-thumb-active .thumb-slider__bullet::after {
+    opacity: 1;
+  }
+  .swiper-slide {
+    width: 55px;
+    height: 55px;
+  }
+
+  // .thumb-slider__bullet
+  &__bullet {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid $color-white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    &::after {
+      opacity: 0;
+      transition: all 0.3s ease 0s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: $color-contrast;
+      color: #fffefe;
+      font-size: 16px;
+      font-weight: 900;
+      counter-increment: item;
+      content: counter(item);
+    }
+  }
+
+  // .thumb-slider__image
+  &__image {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

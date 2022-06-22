@@ -1,0 +1,68 @@
+.delivery {
+  @media (max-width: 560px) {
+    text-align: center;
+  }
+
+  // .delivery-footer__title
+  &__title {
+    color: $color-grey;
+    font-size: 14px;
+    font-weight: 90;
+    text-transform: uppercase;
+    letter-spacing: 0.35px;
+    margin-bottom: 10px;
+  }
+
+  // .delivery-footer__list
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0px -15px;
+    @media (max-width: 560px) {
+      justify-content: center;
+    }
+  }
+
+  // .delivery-footer__item
+  &__item {
+    padding: 15px;
+    img {
+      transition: filter 0.1s linear;
+      filter: grayscale(1);
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+    &--dl {
+      img {
+        width: 135px;
+        height: 20px;
+      }
+    }
+    &--pek {
+      img {
+        width: 160px;
+        height: 20px;
+      }
+    }
+    &--baikal {
+      img {
+        width: 130px;
+        height: 20px;
+      }
+    }
+    &--zheldor {
+      img {
+        width: 130px;
+        height: 20px;
+      }
+    }
+    &--vozovoz {
+      img {
+        width: 130px;
+        height: 20px;
+      }
+    }
+  }
+}

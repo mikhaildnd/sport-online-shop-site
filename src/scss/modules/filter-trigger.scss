@@ -1,0 +1,21 @@
+.filter-trigger {
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    //todo Проверь потом, мб путь будет неправильный
+    background-image: url(../../img/icons/filter.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  // .filter-trigger__text
+  &__text {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+}

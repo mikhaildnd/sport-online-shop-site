@@ -1,0 +1,12 @@
+// Добавляет иконку телефона псевдокслассом ::before
+.phone-icon {
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    background: url('../img/icons/phone-black.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

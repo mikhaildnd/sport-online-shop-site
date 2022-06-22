@@ -1,0 +1,19 @@
+.arrow {
+  width: 100%;
+  height: 100%;
+  &__stroke {
+    transition: stroke 0.1s linear;
+    stroke: #e7e7e7;
+  }
+  &:hover,
+  &:focus-visible {
+    .arrow__stroke {
+      stroke: $color-contrast;
+    }
+  }
+  &:active {
+    .arrow__stroke {
+      stroke: darken($color-contrast, 10%);
+    }
+  }
+}

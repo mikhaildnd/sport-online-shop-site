@@ -1,0 +1,15 @@
+.logo {
+  // .logo__image
+  &__image {
+    user-select: none;
+  }
+
+  // .logo__text
+  &__text {
+    font-family: 'Play';
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}

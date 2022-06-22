@@ -1,0 +1,31 @@
+.trash-button {
+  &::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $color-light-grey;
+    background-image: url(../img/icons/trash.svg);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+    transition: box-shadow 0.1s linear, background-color 0.1s linear;
+  }
+  &:hover {
+    &::before {
+      background-color: darken($color-light-grey, 3%);
+    }
+  }
+  &:active {
+    &::before {
+      background-color: $color-light-grey;
+    }
+  }
+  &:focus-visible {
+    outline: none;
+    &::before {
+      box-shadow: 0 0 5px #acacac;
+    }
+  }
+}
