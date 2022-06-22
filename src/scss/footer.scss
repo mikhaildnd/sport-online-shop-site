@@ -1,0 +1,228 @@
+.footer {
+  background-color: #f7f7f7;
+  padding-top: 36px;
+  padding-bottom: 20px;
+  @media (min-width: 768px) {
+    padding-top: 60px;
+  }
+
+  // .footer__top
+  &__top {
+    display: grid;
+    row-gap: 34px;
+    grid-template-areas:
+      'nav'
+      'social'
+      'phones'
+      'delivery';
+    align-items: start;
+    margin-bottom: 20px;
+    @media (min-width: 475px) {
+      column-gap: 20px;
+    }
+    @media (min-width: 768px) {
+      grid-template-areas:
+        'nav nav'
+        'social delivery'
+        'phones delivery';
+      grid-template-columns: minmax(160px, 20%) 1fr;
+      grid-template-rows: min-content min-content 1fr;
+    }
+    @media (min-width: 1024px) {
+      grid-template-columns: 20% 1fr;
+      grid-template-rows: min-content min-content 1fr;
+      grid-template-areas:
+        'logo nav'
+        'social nav'
+        'phones nav'
+        'delivery delivery';
+    }
+  }
+
+  // .footer__nav
+  &__nav {
+    grid-area: nav;
+    display: grid;
+    row-gap: 24px;
+    @media (min-width: 475px) {
+      grid-area: nav;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 16px;
+    }
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: 1024px) {
+      column-gap: 24px;
+    }
+  }
+
+  // .footer__logo
+  &__logo {
+    display: none;
+    @media (min-width: 1024px) {
+      grid-area: logo;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: min-content min-content;
+      row-gap: 14px;
+      width: 120px; //для текста
+      justify-items: center;
+      .logo__text {
+        font-size: 16px;
+        color: $color-black;
+      }
+      .logo__image {
+        width: 100px;
+      }
+    }
+  }
+
+  // .footer__phones
+  &__phones {
+    justify-self: center;
+    grid-area: phones;
+    display: grid;
+    row-gap: 10px;
+    .phones__link {
+      font-size: 16px;
+    }
+    @media (min-width: 768px) {
+      justify-self: start;
+    }
+    @media (min-width: 1024px) {
+      row-gap: 14px;
+      .phones__link {
+        font-size: 14px;
+      }
+    }
+  }
+
+  // .footer__delivery
+  &__delivery {
+    grid-area: delivery;
+    @media (min-width: 768px) {
+      align-self: center;
+    }
+  }
+
+  // .footer__social
+  &__social {
+    justify-content: center;
+    grid-area: social;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 40px);
+    align-items: center;
+    column-gap: 20px;
+    .socials__image {
+      width: 100%;
+      height: auto;
+    }
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(auto-fit, 30px);
+      justify-content: start;
+      align-self: start;
+      column-gap: 10px;
+      row-gap: 10px;
+    }
+  }
+
+  // .footer__bottom
+  &__bottom {
+    display: grid;
+    row-gap: 14px;
+    @media (min-width: 576px) {
+      grid-template-columns: 1fr min-content;
+      align-items: end;
+      column-gap: 40px;
+    }
+  }
+
+  // .footer__copy
+  &__copy {
+    color: $color-grey;
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
+    @media (min-width: 576px) {
+      order: -1;
+      text-align: initial;
+    }
+  }
+
+  // .footer__payment
+  &__payment {
+    display: inline-grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    column-gap: 16px;
+    @media (min-width: 576px) {
+      justify-content: end;
+    }
+  }
+}
+
+/* Payment */
+.payment {
+  // .payment__item
+  &__item {
+    &:hover {
+      .payment__image {
+        filter: grayscale(0);
+      }
+    }
+  }
+
+  // .payment__image
+  &__image {
+    width: 50px;
+    height: 34px;
+    transition: filter 0.1s linear;
+    filter: grayscale(1);
+  }
+}
+
+/* Phones */
+.phones {
+  // .phones__link
+  &__link {
+    display: inline-grid;
+    grid-auto-flow: column;
+    align-items: center;
+    column-gap: 8px;
+    color: $color-black;
+    font-weight: 900;
+    font-size: 14px;
+    transition: color 0.1s linear;
+    &:hover,
+    &:focus-visible {
+      color: $color-dark-grey;
+    }
+  }
+}
+
+/* Socials */
+.socials {
+  // .socials__link
+  &__link {
+    &:hover {
+      .socials__image {
+        filter: grayscale(0);
+      }
+    }
+    &:focus-visible {
+      .socials__image {
+        filter: grayscale(0);
+      }
+    }
+  }
+
+  // .socials__image
+  &__image {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    transition: filter 0.1s linear;
+    filter: grayscale(1);
+  }
+}
