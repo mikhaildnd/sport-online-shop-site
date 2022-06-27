@@ -23,7 +23,6 @@
     }
   }
   &:focus-visible {
-    outline: none;
     &::before {
       box-shadow: 0 0 5px #acacac;
     }

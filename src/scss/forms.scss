@@ -36,15 +36,6 @@
 }
 
 /* Input */
-input[type='text'],
-input[type='email'],
-input[type='tel'],
-textarea {
-  appearance: none;
-  &:focus {
-    outline: none;
-  }
-}
 .input {
   border: 1px solid $color-light-grey;
   width: 100%;
