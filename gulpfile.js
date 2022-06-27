@@ -42,14 +42,17 @@ const _path = {
     favicon: dist_folder + '/',
   },
   src: {
-    favicon: src_folder + '/img/favicon.{jpg,png,svg,gif,ico,webp}',
     html: [src_folder + '/**/*.html', '!' + src_folder + '/_*.html'],
     js: src_folder + '/js/*.js',
     css: src_folder + '/scss/style.scss',
     images: [src_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}', '!**/favicon.*'],
     fonts: src_folder + '/fonts/*.ttf',
     videos: src_folder + '/videos/*.*',
-    favicon: [src_folder + '/favicon.ico', src_folder + '/manifest.json'],
+    favicon: [
+      src_folder + '/img/favicon.{jpg,png,svg,gif,ico,webp}',
+      src_folder + '/favicon.ico',
+      src_folder + '/manifest.json',
+    ],
   },
   watch: {
     html: src_folder + '/**/*.html',
@@ -237,7 +240,6 @@ export const build = gulp.series(
   gulp.parallel(html, styles, scripts, images, favicon),
   fontsOtf2ttf,
   fonts,
-  // fontsInclude,
 );
 
 export default gulp.series(build, gulp.parallel(server, watch));
