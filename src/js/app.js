@@ -5,7 +5,6 @@ import { Accordeon } from './modules/toggle-accordeon.js';
 import { cardDetailsControl, headerViewToggler } from './modules/helpers.js';
 import { TabManager } from './modules/tabs-manager.js';
 
-import 'swiper/css';
 import 'nouislider/dist/nouislider.css';
 
 /* Product tabs */
@@ -277,6 +276,7 @@ const imagesSubSlider = new Swiper('.images-product__subslider', {
   spaceBetween: 0,
   speed: 800,
 });
+
 const imagesMainSlider = new Swiper('.images-product__mainslider', {
   modules: [Thumbs],
   slidesPerView: 1,
