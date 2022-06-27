@@ -27,9 +27,6 @@
     &:active {
       background-color: darken(#f3f3f3, 5%);
     }
-    &:focus-visible {
-      outline: none;
-    }
     &:hover,
     &:focus-visible {
       box-shadow: 0 0 5px #acacac;
@@ -43,9 +40,6 @@
     background-color: $color-main;
     &:active {
       background-color: darken($color-main, 5%);
-    }
-    &:focus-visible {
-      outline: none;
     }
     &:hover,
     &:focus-visible {

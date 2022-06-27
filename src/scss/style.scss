@@ -608,7 +608,6 @@ body {
     transition: box-shadow 0.1s linear, opacity 0.1s linear;
     &:hover,
     &:focus-visible {
-      outline: none;
       box-shadow: 0 0 5px $color-light-grey;
       opacity: 1;
     }
@@ -667,7 +666,6 @@ body {
     }
     &:focus-visible {
       box-shadow: 0 0 10px 2px $color-light-grey;
-      outline: none;
     }
     &:active {
       background-color: $color-light-grey;
@@ -743,7 +741,6 @@ body {
     }
     &:focus-visible {
       box-shadow: 0 0 10px 2px $color-contrast;
-      outline: none;
     }
     &:active {
       background-color: $color-contrast;
