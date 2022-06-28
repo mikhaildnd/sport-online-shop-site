@@ -24,8 +24,9 @@
 
   // .checkout__order
   &__order {
-    @media (max-width: $md2) {
-      margin-bottom: 30px;
+    margin-bottom: 30px;
+    @media (min-width: $md2) {
+      margin-bottom: 0;
     }
   }
 }
@@ -71,7 +72,7 @@
       color: $color-contrast;
       font-size: 20px;
     }
-    @media (min-width: 1024px) {
+    @media (min-width: $md2) {
       font-size: 20px;
       span {
         font-size: 22px;
@@ -104,12 +105,12 @@
 
   // .item-order__image
   &__image {
-    flex: 0 0 110px;
+    flex: 0 0 80px;
     img {
       max-width: 100%;
     }
-    @media (max-width: $md4) {
-      flex: 0 0 80px;
+    @media (min-width: $md4) {
+      flex: 0 0 110px;
     }
   }
 
@@ -133,20 +134,20 @@
   // .item-order__price
   &__price {
     color: $color-dark-grey;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 900;
-    @media (max-width: $md4) {
-      font-size: 18px;
+    @media (min-width: $md4) {
+      font-size: 24px;
     }
   }
 
   // .item-order__quantity
   &__quantity {
-    flex: 1 1 auto;
-    padding: 0px 30px;
-    @media (max-width: 700px) {
-      flex: 0 0 auto;
-      padding-right: 15px;
+    flex: 0 0 auto;
+    padding-right: 15px;
+    @media (min-width: 700px) {
+      flex: 1 1 auto;
+      padding: 0px 30px;
     }
   }
 
@@ -180,7 +181,7 @@
 
   // .content-checkout__nav
   &__nav {
-    @media (min-width: 768px) {
+    @media (min-width: $md4) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       align-items: center;
@@ -227,7 +228,7 @@
   &__form {
     display: grid;
     row-gap: 20px;
-    @media (min-width: 768px) {
+    @media (min-width: $md4) {
       grid-template-columns: 55% 1fr;
       column-gap: 20px;
     }

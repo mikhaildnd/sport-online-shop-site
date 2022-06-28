@@ -10,7 +10,7 @@
   font-weight: 900;
   line-height: 18px;
   text-transform: uppercase;
-  @media (min-width: 992px) {
+  @media (min-width: $md3) {
     &:hover,
     &:focus-visible {
       background-color: darken($color-contrast, 7%);
@@ -22,7 +22,7 @@
   &--grey {
     background-color: $color-light-grey;
     color: $color-black;
-    @media (min-width: 992px) {
+    @media (min-width: $md3) {
       &:hover,
       &:focus-visible {
         background-color: $color-grey;

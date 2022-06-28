@@ -2,7 +2,7 @@
   background-color: #f7f7f7;
   padding-top: 36px;
   padding-bottom: 20px;
-  @media (min-width: 768px) {
+  @media (min-width: $md4) {
     padding-top: 60px;
   }
 
@@ -17,10 +17,10 @@
       'delivery';
     align-items: start;
     margin-bottom: 20px;
-    @media (min-width: 475px) {
+    @media (min-width: $md6) {
       column-gap: 20px;
     }
-    @media (min-width: 768px) {
+    @media (min-width: $md4) {
       grid-template-areas:
         'nav nav'
         'social delivery'
@@ -28,7 +28,7 @@
       grid-template-columns: minmax(160px, 20%) 1fr;
       grid-template-rows: min-content min-content 1fr;
     }
-    @media (min-width: 1024px) {
+    @media (min-width: $md2) {
       grid-template-columns: 20% 1fr;
       grid-template-rows: min-content min-content 1fr;
       grid-template-areas:
@@ -44,15 +44,15 @@
     grid-area: nav;
     display: grid;
     row-gap: 24px;
-    @media (min-width: 475px) {
+    @media (min-width: $md6) {
       grid-area: nav;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 16px;
     }
-    @media (min-width: 768px) {
+    @media (min-width: $md4) {
       grid-template-columns: repeat(3, 1fr);
     }
-    @media (min-width: 1024px) {
+    @media (min-width: $md2) {
       column-gap: 24px;
     }
   }
@@ -60,7 +60,7 @@
   // .footer__logo
   &__logo {
     display: none;
-    @media (min-width: 1024px) {
+    @media (min-width: $md2) {
       grid-area: logo;
       display: grid;
       grid-template-columns: 1fr;
@@ -87,10 +87,10 @@
     .phones__link {
       font-size: 16px;
     }
-    @media (min-width: 768px) {
+    @media (min-width: $md4) {
       justify-self: start;
     }
-    @media (min-width: 1024px) {
+    @media (min-width: $md2) {
       row-gap: 14px;
       .phones__link {
         font-size: 14px;
@@ -101,7 +101,7 @@
   // .footer__delivery
   &__delivery {
     grid-area: delivery;
-    @media (min-width: 768px) {
+    @media (min-width: $md4) {
       align-self: center;
     }
   }
@@ -118,7 +118,7 @@
       width: 100%;
       height: auto;
     }
-    @media (min-width: 768px) {
+    @media (min-width: $md4) {
       grid-template-columns: repeat(auto-fit, 30px);
       justify-content: start;
       align-self: start;
@@ -131,7 +131,7 @@
   &__bottom {
     display: grid;
     row-gap: 14px;
-    @media (min-width: 576px) {
+    @media (min-width: $md5) {
       grid-template-columns: 1fr min-content;
       align-items: end;
       column-gap: 40px;
@@ -144,7 +144,7 @@
     font-size: 12px;
     font-weight: 300;
     text-align: center;
-    @media (min-width: 576px) {
+    @media (min-width: $md5) {
       order: -1;
       text-align: initial;
     }
@@ -156,7 +156,7 @@
     grid-auto-flow: column;
     justify-content: center;
     column-gap: 16px;
-    @media (min-width: 576px) {
+    @media (min-width: $md5) {
       justify-content: end;
     }
   }

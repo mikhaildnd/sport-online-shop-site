@@ -26,7 +26,7 @@
   // .catalog-bar__show
   &__show {
     display: none;
-    @media (min-width: 475px) {
+    @media (min-width: $md6) {
       display: inline-grid;
       grid-auto-flow: column;
       align-items: center;

@@ -25,14 +25,15 @@
 
   // .product__images
   &__images {
-    flex: 0 0 360px;
+    flex: 1 1 330px;
     //чтобы слайдер отображался во флекс контейнере
     min-width: 0;
-    @media (max-width: $md1) {
-      flex: 1 1 330px;
+    margin-bottom: 30px;
+    @media (min-width: $md1) {
+      flex: 0 0 360px;
     }
-    @media (max-width: 700px) {
-      margin-bottom: 30px;
+    @media (min-width: 700px) {
+      margin-bottom: 0;
     }
   }
 

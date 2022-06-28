@@ -42,7 +42,7 @@
       display: block;
       color: $color-contrast;
     }
-    @media (min-width: 576px) {
+    @media (min-width: $md5) {
       font-size: 48px;
     }
   }
@@ -134,13 +134,14 @@
   // .products-slider__title
   &__title {
     flex: 1 1 auto;
+    margin-bottom: 15px;
     color: $color-light-grey;
     font-family: 'UniSans';
     font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 0.75px;
-    @media (max-width: $md3) {
-      margin-bottom: 15px;
+    @media (min-width: $md3) {
+      margin-bottom: 0;
     }
   }
 
@@ -284,16 +285,16 @@
 
   // .text-block__body
   &__body {
-    padding-top: 45px;
-    padding-bottom: 35px;
-    padding-right: 35px;
-    padding-left: 35px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
     background-color: $color-main;
-    @media (max-width: $md2) {
-      padding-top: 25px;
-      padding-bottom: 15px;
-      padding-right: 20px;
-      padding-left: 20px;
+    @media (min-width: $md2) {
+      padding-top: 45px;
+      padding-bottom: 35px;
+      padding-right: 35px;
+      padding-left: 35px;
     }
   }
 
