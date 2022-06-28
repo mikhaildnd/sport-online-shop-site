@@ -147,8 +147,11 @@
 
   // .products-slider__control
   &__control {
-    display: flex;
+    display: grid;
     align-items: center;
+    justify-content: end;
+    grid-auto-flow: column;
+    justify-items: end;
   }
 
   // .products-slider__arrow
