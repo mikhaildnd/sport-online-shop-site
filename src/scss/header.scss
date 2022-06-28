@@ -31,14 +31,14 @@
     column-gap: 16px;
     padding-top: 15px;
     padding-bottom: 15px;
-    @media (min-width: 480px) {
+    @media (min-width: $md6) {
       grid-template-columns: min-content 1fr 1fr;
       grid-template-areas: 'logo dropdown contacts';
     }
     @media (min-width: 955px) {
       grid-template-areas: 'logo nav contacts';
     }
-    @media (min-width: 1024px) {
+    @media (min-width: $md2) {
       column-gap: 26px;
     }
   }
@@ -90,7 +90,7 @@
     --contact-gutter: 24px;
     column-gap: var(--contact-gutter, 24px);
     justify-self: end;
-    @media (min-width: 480px) {
+    @media (min-width: $md6) {
       display: grid;
     }
     .contacts-header__item {
@@ -108,7 +108,7 @@
     grid-area: dropdown;
     display: block;
     justify-self: end;
-    @media (min-width: 480px) {
+    @media (min-width: $md6) {
       justify-self: start;
     }
     @media (min-width: 955px) {
@@ -162,7 +162,7 @@
       color: $color-white;
       background: none;
     }
-    @media (min-width: 375px) {
+    @media (min-width: $md7) {
       grid-template-areas: 'login reg' 'email email';
     }
   }

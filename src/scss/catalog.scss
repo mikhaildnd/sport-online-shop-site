@@ -6,24 +6,21 @@
   &__top {
     position: relative;
     border-bottom: 1px solid $color-light-grey;
-    @media (min-width: 1024px) {
+    @media (min-width: $md2) {
       border-bottom: none;
     }
   }
 
   // .filter__title
   &__title {
-    padding: 25px 15px 5px 15px;
+    padding: 25px 15px 25px 15px;
     color: $color-main;
     font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;
     transition: all 0.3s ease 0s;
-    @media (max-width: $md2) {
-      padding: 25px 15px 25px 15px;
-      &.active {
-        padding: 25px 15px 5px 15px;
-      }
+    @media (min-width: $md2) {
+      padding: 25px 15px 5px 15px;
     }
   }
 
@@ -39,7 +36,7 @@
     background-position: center;
     background-size: cover;
     transform: translateY(-50%);
-    @media (min-width: 1024px) {
+    @media (min-width: $md2) {
       display: none;
     }
   }
@@ -293,17 +290,17 @@
       column-gap: 10px;
       row-gap: 20px;
     }
-    @media (min-width: 576px) {
+    @media (min-width: $md5) {
       column-gap: 20px;
     }
-    @media (min-width: 768px) {
+    @media (min-width: $md4) {
       grid-template-columns: repeat(3, 1fr);
     }
-    @media (min-width: 1024px) {
+    @media (min-width: $md2) {
       grid-template-columns: repeat(2, 1fr);
       gap: 30px;
     }
-    @media (min-width: 1200px) {
+    @media (min-width: $md1) {
       grid-template-columns: repeat(3, 1fr);
     }
   }
@@ -319,17 +316,17 @@
       justify-self: end;
     }
     .catalog-bar__show {
-      @media (min-width: 475px) {
+      @media (min-width: $md6) {
         grid-area: count;
         justify-self: start;
       }
     }
     .catalog-bar__filter-trigger {
       grid-area: filter;
-      @media (min-width: 475px) {
+      @media (min-width: $md6) {
         justify-self: end;
       }
-      @media (min-width: 1024px) {
+      @media (min-width: $md2) {
         display: none;
       }
     }
@@ -340,16 +337,16 @@
     column-gap: 10px;
     row-gap: 16px;
     margin-bottom: 24px;
-    @media (min-width: 475px) {
+    @media (min-width: $md6) {
       grid-template-areas:
         'sort view'
         'count filter';
     }
-    @media (min-width: 768px) {
+    @media (min-width: $md4) {
       grid-template-areas: 'sort count filter view';
       grid-template-columns: auto auto 1fr min-content;
     }
-    @media (min-width: 1024px) {
+    @media (min-width: $md2) {
       grid-template-areas: 'sort count view';
       grid-template-columns: auto 1fr min-content;
     }
@@ -402,7 +399,7 @@
     .select__label {
       display: none;
     }
-    @media (min-width: 475px) {
+    @media (min-width: $md6) {
       .select__label {
         display: inline-block;
       }

@@ -12,18 +12,14 @@ $fontSize: 14;
 //</Шрифт по умолчанию>==========================================================================================
 
 $minWidth: 320px;
-$maxWidth: 1400px;
 $maxWidthContainer: 1180px;
-$md1: 1412px;
-$md2: 991.98px;
-$md3: 767.98px;
-$md4: 479.98px;
-// $md2: 1024px;
-// $md3: 992px;
-// $md4: 768px;
-// $md5: 576px;
-// $md6: 480px;
-// $md7: 375px;
+$md1: 1180px;
+$md2: 1024px;
+$md3: 992px;
+$md4: 768px;
+$md5: 576px;
+$md6: 480px;
+$md7: 375px;
 
 $mainColor: #000;
 
@@ -106,7 +102,7 @@ body {
       'menu'
       'content'
       'news';
-    @media (min-width: 1024px) {
+    @media (min-width: $md2) {
       grid-template-columns: 260px 1fr;
       grid-template-rows: min-content 1fr;
       grid-template-areas:
@@ -117,7 +113,7 @@ body {
       grid-template-areas:
         'menu'
         'content';
-      @media (min-width: 1024px) {
+      @media (min-width: $md2) {
         grid-template-columns: 260px 1fr;
         grid-template-rows: min-content 1fr;
         grid-template-areas:
@@ -141,7 +137,7 @@ body {
     &.js-open {
       display: flex;
     }
-    @media (min-width: 1024px) {
+    @media (min-width: $md2) {
       grid-area: filter;
       position: static;
       display: flex;
@@ -154,7 +150,7 @@ body {
   &__menu {
     grid-area: menu;
     margin-bottom: 25px;
-    @media (min-width: 1024px) {
+    @media (min-width: $md2) {
       margin-bottom: 35px;
     }
   }
@@ -165,11 +161,11 @@ body {
     display: grid;
     align-content: start;
     row-gap: 75px;
-    @media (min-width: 768px) {
+    @media (min-width: $md4) {
       grid-template-columns: repeat(2, 1fr);
       column-gap: 30px;
     }
-    @media (min-width: 1024px) {
+    @media (min-width: $md2) {
       grid-template-columns: 1fr;
     }
   }
@@ -430,7 +426,6 @@ body {
       overflow: hidden;
       //решает проблему с боковым меню, которое закрывалось если навести курсор
       pointer-events: none;
-      // visibility: hidden;
     }
   }
 }
@@ -615,7 +610,7 @@ body {
       color: $color-grey;
       border-bottom: 2px dotted $color-light-grey;
     }
-    @media (min-width: 1024px) {
+    @media (min-width: $md2) {
       opacity: 0;
     }
   }
@@ -862,7 +857,7 @@ body {
   &__title {
     display: inline-block;
     margin-bottom: 20px;
-    @media (min-width: 1024px) {
+    @media (min-width: $md2) {
       margin-bottom: 30px;
     }
   }
@@ -926,7 +921,7 @@ body {
   &__title {
     display: inline-block;
     margin-bottom: 20px;
-    @media (min-width: 1024px) {
+    @media (min-width: $md2) {
       margin-bottom: 30px;
     }
   }
