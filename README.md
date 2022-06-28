@@ -2,7 +2,9 @@
 
 ![Изображение главной страницы](https://user-images.githubusercontent.com/58606474/176140702-dde2fb27-8f04-4847-82bd-012c3ab5e9a6.jpg)
 
-## Список доступных страниц
+## Список доступных страниц:
+> *Все страницы загружены на сервис [Netlify](https://www.netlify.com/)*
+
 * [Главная страница](https://sticksports-website.netlify.app/)
 * [Страница каталога](https://sticksports-website.netlify.app/catalog.html)
 * [Страница продукта](https://sticksports-website.netlify.app/product.html)
