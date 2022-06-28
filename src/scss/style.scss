@@ -880,7 +880,8 @@ body {
     color: $color-black;
     margin-bottom: 20px;
     @media (min-width: $md2) {
-      &:hover {
+      &:hover,
+      &:focus-visible {
         color: $color-contrast;
       }
     }
